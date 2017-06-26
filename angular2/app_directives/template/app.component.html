@@ -1,0 +1,54 @@
+<!--
+    There are three kinds of directives...
+    1. Components - It is a directive-with-a-template and the @Component decorator.
+    2. Structural Directives - It alters the layout of the DOM by adding, replacing and removing its elements.
+    (NgFor,NgIf)
+    3. Attribute Directives - It changes the appearance or behavior of a DOM element.
+    (ngModel,NgSwitch,NgStyle,NgClass)
+-->
+<div class="container">
+    <h1>Structural Directives</h1>
+    
+    <h3>ngFor</h3>
+    <div *ngFor='let fruit of fruits' class="box">{{fruit}}</div>
+    
+    <h3>ngIf</h3>
+    <input type="button" (click)='toggleStatus()' value="Toggle" />
+    <div *ngIf='status'><h1>This is the toggle section</h1></div>
+    
+</div>
+
+<div class="container">
+    <h1>Attribute Directives</h1>
+    <h3>------------ngModel------------</h3>
+    <input type="text" [(ngModel)]='myName' /> My name is <b>{{myName}}</b>
+    <br/><br/>
+    <h3>------------ngSwitch------------</h3>
+    <div class='tabSelection'>
+      <button value="tab1" (click)='showTab(1)'>Tab1</button>
+      <button value="tab2" (click)='showTab(2)'>Tab2</button>
+      <button value="tab3" (click)='showTab(3)'>Tab3</button>
+    </div>
+
+    <div [ngSwitch]='tab'>
+        <h2 *ngSwitchCase='1'>This is Tab1 Content</h2>
+        <h2 *ngSwitchCase='2'>This is Tab2 Content</h2>
+        <h2 *ngSwitchCase='3'>This is Tab3 Content</h2>
+    </div>
+
+    <h3>------------ngClass------------</h3>
+    <div [ngClass]="setClass()">
+        <p>This is the div under ngClass section</p>
+    </div>
+
+    <h3>------------ngStyle------------</h3>
+    <div [ngStyle]="setStyle()">
+        <p>This is the div under ngStyle section</p>
+    </div>
+
+
+</div>
+
+<!--<div class="container">
+    <h1></h1>
+</div>-->

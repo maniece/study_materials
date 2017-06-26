@@ -1,0 +1,6 @@
+<h2>This is subcomponent 1</h2>
+<h3>The value from Parent Component is {{valueToSC_1}}</h3>
+<h3>The value from the subComponent2 is {{childData}}</h3>
+<hr/>
+<!--@Input and @Output-->
+<sc_2 [valueToSC_2]='valueToSC_1' (childEvent)='childData=$event'></sc_2>
