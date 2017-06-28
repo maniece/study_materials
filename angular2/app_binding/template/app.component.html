@@ -1,0 +1,21 @@
+<!--
+    There are 3 types of data binding
+    1. Property binding - [] 
+    2. Event binding - ()
+    3. Two way binding - [()]
+-->
+<h2>Binding</h2>
+
+<!-- INTERPOLATION -->
+<!--<p class={{colorClass}}>I am going to school</p>-->
+
+<h3>PROPERTY BINDING</h3>
+<p [class]="colorClass">I am going to school</p>
+<p [style.border]="border">I am styding Pre.K.G</p>
+
+<h3>EVENT BINDING</h3>
+<input type="button" (click)='changeClass()' value="change class"/>
+<hr/>
+<h2>Two way binding</h2>
+Name: <input type="text" [(ngModel)]='myName' />
+<p>My Name is {{myName}} </p>
