@@ -10,9 +10,10 @@ import * as _ from 'underscore';
 
 export class AppComponent{
     constructor(){
-        let numArray = {"name":"mani"};
+        let numArray = {"name":"xyz","class":"lkg"};
         let num2 = _.keys(numArray);
         setTimeout(()=>{console.log("Distinct Array:"+num2)},2000);
+        /*Output is ["name","class"]*/
         /*Please refer underscore official website*/
     }
 }
